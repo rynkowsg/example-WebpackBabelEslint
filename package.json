@@ -1,0 +1,25 @@
+{
+  "name": "m3",
+  "version": "0.0.1",
+  "description": "Money making machine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+ssh://git@github.com/aleksUIX/m3.git",
+  "contributors": [
+    {
+      "name": "Aleksander Sekowski",
+      "email": "aleksander@uixlimited.com"
+    },
+    {
+      "name": "Greg Rynkowski",
+      "email": "<dev@rynkowski.info>"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleksUIX/m3/issues"
+  },
+  "homepage": "https://github.com/aleksUIX/m3#readme"
+}
