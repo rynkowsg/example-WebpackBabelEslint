@@ -1,3 +1,5 @@
+const logger = require('./logger');
+
 export default function printMe() {
-    console.log('I get called from print.js!');
+  logger.log('I get called from print.js!');
 }
