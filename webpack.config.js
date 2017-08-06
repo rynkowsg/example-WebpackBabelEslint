@@ -18,6 +18,17 @@ const config = {
   module: {
     rules: [
       {
+        enforce: "pre",
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          failOnError: true,
+          failOnWarning: false,
+          fix: false,
+          quiet: false,
+        },
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',

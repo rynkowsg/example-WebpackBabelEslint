@@ -1,0 +1,5 @@
+node_modules/
+dist/
+
+# By default eslint ignores .eslintrc.* files
+!.eslintrc.*
