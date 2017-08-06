@@ -1,5 +1,7 @@
+/* global document */
+
 import _ from 'lodash';
-import printMe from './print';
+import printMe from '../common/print';
 
 function component() {
   const element = document.createElement('div');

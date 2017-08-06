@@ -4,9 +4,14 @@
   "description": "Money making machine",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --colors --config webpack.config.babel.js",
-    "watch": "webpack --colors --watch",
-    "start": "webpack-dev-server --open",
+    "webpack:node": "cross-env PLATFORM=node webpack --colors --config webpack.config.babel.js",
+    "webpack:web": "cross-env PLATFORM=browser webpack --colors --config webpack.config.babel.js",
+    "build:nodeapp": "npm run webpack:node",
+    "build:webapp": "npm run webpack:web",
+    "watch:nodeapp": "npm run webpack:node --watch",
+    "watch:webapp": "npm run webpack:web --watch",
+    "start:nodeapp": "npm run build:nodeapp && node dist/app.bundle.node.js",
+    "start:webapp": "cross-env PLATFORM=browser webpack-dev-server --open",
     "eslint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -44,6 +49,7 @@
     "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
+    "enumify-x": "^1.7.0",
     "lodash": "^4.17.4"
   }
 }
