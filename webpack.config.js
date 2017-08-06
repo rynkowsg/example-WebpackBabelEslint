@@ -15,6 +15,18 @@ const config = {
   devServer: {
     contentBase: './dist',
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ["env"],
+        }
+      },
+    ],
+  },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
