@@ -120,5 +120,5 @@ typings/
 .env
 
 #
-bundle.js
+dist/
 
