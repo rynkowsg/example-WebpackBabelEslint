@@ -4,7 +4,9 @@
   "description": "Money making machine",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --colors --config webpack.config.js",
+    "watch": "webpack --colors --watch",
+    "start": "webpack-dev-server --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "git+ssh://git@github.com/aleksUIX/m3.git",
@@ -26,7 +28,8 @@
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.16",
     "html-webpack-plugin": "^2.30.1",
-    "webpack": "^3.4.1"
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
     "lodash": "^4.17.4"
