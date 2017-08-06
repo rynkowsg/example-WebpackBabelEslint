@@ -19,12 +19,6 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        enforce: "pre",
-        exclude: /node_modules/,
-        loader: "jshint-loader",
-      },
-      {
-        test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
