@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/aleksUIX/m3#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
     "html-webpack-plugin": "^2.30.1",
     "webpack": "^3.4.1"
   },
