@@ -3,7 +3,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const platform = require('./src/common/platform.js');
+const parseArgs = require('minimist');
 
 console.log('>> loaded webpack.config.babel.js');
 
@@ -118,16 +118,16 @@ const nodeConfig = Object.assign({}, baseConfig, {
 
 
 function exportedConfig() {
-  const Platform = platform.Platform;
-  const getPlatform = platform.getPlatform;
+  const argv = parseArgs(process.argv.slice(2));
+  console.assert(argv, "argv can't be empty");
 
-  const platformType = getPlatform();
-  if (platformType === Platform.BROWSER) {
+  if (argv.target === 'web') {
     return webConfig;
   }
-  if (platformType === Platform.NODE) {
+  if (argv.target === 'node') {
     return nodeConfig;
   }
+  console.assert(false, 'Target', argv.target, 'is not supported');
   return {};
 }
 
