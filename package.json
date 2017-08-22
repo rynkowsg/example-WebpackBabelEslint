@@ -4,14 +4,14 @@
   "description": "Money making machine",
   "main": "index.js",
   "scripts": {
-    "webpack:node": "webpack --colors --config webpack.config.babel.js --target node",
-    "webpack:web": "webpack --colors --config webpack.config.babel.js --target web",
+    "webpack:node": "webpack --colors --config webpack.config.node.babel.js",
+    "webpack:web": "webpack --colors --config webpack.config.web.babel.js",
     "build:nodeapp": "npm run webpack:node",
     "build:webapp": "npm run webpack:web",
     "watch:nodeapp": "npm run webpack:node --watch",
     "watch:webapp": "npm run webpack:web --watch",
     "start:nodeapp": "npm run build:nodeapp && node dist/app.bundle.node.js",
-    "start:webapp": "webpack-dev-server --open --target web",
+    "start:webapp": "webpack-dev-server --open --config webpack.config.web.babel.js",
     "eslint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -44,7 +44,6 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-react": "^7.1.0",
     "html-webpack-plugin": "^2.30.1",
-    "minimist": "^1.2.0",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
   },
